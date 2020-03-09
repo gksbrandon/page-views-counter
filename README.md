@@ -14,20 +14,26 @@ Now you can test a payload with curl / Postman against the two endpoints:
 
 **POST http://localhost:8888/counter/v1/statistics**
 
-```curl -H "Content-Type: application/json" -X POST -d '{"data": {"article_id": "abc"}}' http://localhost:8888/counter/v1/statistics -v```
+```
+curl -H "Content-Type: application/json" -X POST -d '{"data": {"article_id": "abc"}}' http://localhost:8888/counter/v1/statistics -v
+```
 
-{"data":{"article_id":"abc"}}
-```{
+```
+{
    "data":{
       "article_id":"abc"
    }
-}```
+}
+```
 
 **GET http://localhost:8888/counter/v1/statistics/article_id/{{article_id}}**
 
-```➜  ~ curl http://localhost:8888/counter/v1/statistics/article_id/abc -v```
+```
+➜  ~ curl http://localhost:8888/counter/v1/statistics/article_id/abc -v
+```
 
-```{
+```
+{
    "data":{
       "article_id":"abc",
       "type":"statistics_article_view_count",
@@ -56,11 +62,15 @@ Now you can test a payload with curl / Postman against the two endpoints:
          ]
       }
    }
-}```
+}
+```
 
-```curl http://localhost:8888/counter/v1/statistics/article_id/def -v```
+```
+curl http://localhost:8888/counter/v1/statistics/article_id/def -v
+```
 
-```{
+```
+{
    "data":{
       "article_id":"def",
       "type":"statistics_article_view_count",
@@ -89,5 +99,5 @@ Now you can test a payload with curl / Postman against the two endpoints:
          ]
       }
    }
-}```
-
+}
+```
