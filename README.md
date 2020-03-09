@@ -29,7 +29,7 @@ curl -H "Content-Type: application/json" -X POST -d '{"data": {"article_id": "ab
 **GET http://localhost:8888/counter/v1/statistics/article_id/{{article_id}}**
 
 ```
-➜  ~ curl http://localhost:8888/counter/v1/statistics/article_id/abc -v
+curl http://localhost:8888/counter/v1/statistics/article_id/abc -v
 ```
 
 ```
